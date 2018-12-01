@@ -1,0 +1,1773 @@
+/* ==== GENERAL ==== */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    content: '';
+}
+
+html {
+    background-color: #DFE2DB !important;
+}
+
+body {
+    font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: -25px !important;
+    padding: 0;
+}
+
+header {
+    color: whitesmoke;
+    font-family: "Segoe UI";
+    font-size: 1em;
+    line-height: 50%;
+    top: 35%;
+    left: 45%;
+    z-index: 100;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* = White Divider = */
+
+hr {
+    width: 10px;
+    border-top: 10px solid white !important;
+    border-radius: 50%;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: white;
+}
+
+hr:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid white;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: -21px;
+    left: 17px;
+}
+
+
+/* = Black Divider = */
+
+hr.black {
+    width: 10px;
+    border-top: 10px solid #000 !important;
+    border-radius: 50%;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: white;
+}
+
+hr.black:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid #000;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: -21px;
+    left: 17px;
+}
+
+
+/* ==== GLOBAL ==== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1,
+h2 {
+    margin: 0 0 40px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p.lead {
+    font-weight: normal;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+a {
+    color: #a9c056;
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #000;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #c9302c;
+}
+
+blockquote {
+    padding: 0;
+    border: none;
+    font-style: italic;
+    text-align: left;
+}
+
+blockquote cite {
+    display: block;
+    color: #777;
+    margin: 15px 0 0 0;
+}
+
+blockquote:before {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+.btn,
+a.btn {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: white;
+}
+
+.btn {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.text-danger,
+li.text-danger a {
+    color: #dd5638;
+}
+
+a.text-danger:hover {
+    color: #e55939;
+}
+
+
+/* End of global css */
+
+
+/* ===========
+Start of custom css 
+===============*/
+
+
+/* ==========
+
+Background Image 
+
+============ */
+
+.bg {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 183, 234, 0.67)), to(rgba(0, 0, 0, 0.7))), url('../images/bg.jpg') no-repeat center;
+    background: linear-gradient(rgba(125, 183, 234, 0.67), rgba(0, 0, 0, 0.7)), url('../images/bg.jpg') no-repeat center;
+    background-attachment: fixed;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    background-size: cover;
+    height: 800px;
+}
+
+
+/* ==========
+
+Navigation With Brand-Name
+
+=============
+*/
+
+#navigation {
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px !important;
+    padding-left: 30%;
+    background-color: #213140 !important;
+    -webkit-transition: top 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, transform 0.3s;
+    transition: top 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+    -webkit-box-shadow: 0 1px 1px #888888;
+    box-shadow: 0 1px 1px #888888;
+}
+
+.navbar-toggler.clicked {
+    margin-left: 170px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+.navbar-toggler span {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: -10px 0 15px -12px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+    -webkit-transition: transform .35s ease-in-out;
+    -webkit-transition: -webkit-transform .35s ease-in-out;
+    transition: -webkit-transform .35s ease-in-out;
+    transition: transform .35s ease-in-out;
+    transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 0.9;
+    margin: 9px 3px 0 -5px;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    opacity: 0.9;
+    margin: 9px 3px 0 -5px;
+}
+
+.navbar-toggler-icon {
+    padding: 20px !important;
+    top: 10px !important;
+    background: none !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-inverse .navbar-nav .active>.nav-link,
+.navbar-inverse .navbar-nav .nav-link.active,
+.navbar-inverse .navbar-nav .nav-link.open,
+.navbar-inverse .navbar-nav .open>.nav-link {
+    -webkit-box-shadow: inset 0px -4px 0px #7DB7EA;
+    box-shadow: inset 0px -4px 0px #7DB7EA;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+nav ul {
+    margin-right: 0px;
+}
+
+nav ul li {
+    color: black !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+
+/* Slidebar Navigation */
+
+
+/* Underline From Center */
+
+.hvr {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px transparent;
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #7DB7EA;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr:hover:before,
+.hvr:focus:before,
+.hvr:active:before {
+    left: 0;
+    right: 0;
+}
+
+
+/* =========
+
+Hero Section
+
+============*/
+
+#hero {
+    position: absolute;
+    height: auto;
+    width: auto;
+    text-align: center;
+    left: 40%;
+    top: 20%;
+    z-index: 8888;
+}
+
+#hero .heroInfo {
+    text-align: center;
+    width: 100%;
+    margin-top: 20%;
+    word-spacing: 5px;
+    display: table;
+    z-index: 9999;
+    color: #fff;
+    display: table-cell;
+}
+
+#hero h1 {
+    position: relative;
+    font-size: 5em;
+}
+
+#hero h3 {
+    font-size: 25pt;
+}
+
+#hero small {
+    font-size: 15pt;
+}
+
+#hero .social-link i:hover {
+    background-color: white;
+    border-radius: 50%;
+    color: #7DB7EA;
+}
+
+#hero .social-link i {
+    color: #fff;
+    display: table;
+    float: left;
+    margin-right: 30px;
+    padding: 15px 15px;
+    position: relative;
+    left: 4.5em;
+    top: 0.4em;
+    bottom: 0.8em;
+    font-size: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#hero .button {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: default;
+    position: relative;
+    width: 7.4em;
+    margin-top: 50px;
+}
+
+#hero .button:hover {
+    background-color: #fff;
+    color: #7DB7EA !important;
+}
+
+#hero .button:visited {
+    color: #fff;
+}
+
+
+/* =========
+
+intro Section 
+
+=========== */
+
+#intro {
+    background-color: #7DB7EA;
+    float: left;
+    width: 100%;
+    display: table;
+}
+
+#intro .introImage img {
+    float: left;
+    position: relative;
+    display: table;
+    border: 6px solid #272626;
+    margin-right: 50px;
+    border-radius: 50% !important;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+#intro .introHero {
+    padding: 80px 0 10em 12em;
+    color: #fff;
+}
+
+#intro .introInfo {
+    padding-top: 73px
+}
+
+#intro h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+#intro p {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+#bigTriangleColor {
+    fill: #7DB7EA;
+}
+
+
+/* ==========
+
+About Section A&Q
+
+============ */
+
+.about {
+    position: relative;
+    clear: both;
+    padding-top: 40px !important;
+}
+
+.about h1 {
+    position: relative;
+    text-align: center;
+    margin-top: 2em !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+
+/* After Style For About H1 */
+
+.about h1:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    width: 70px;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: -80px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+
+/* Before Style For About H1 */
+
+.about h1:before {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    width: 70px;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: 60px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+
+/* After Style For About H1 Span */
+
+.about h1 span:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    background-color: rgb(51, 67, 195);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    top: 35px;
+    left: -105px;
+}
+
+.about .left-about {
+    margin-top: 30px;
+    float: left;
+}
+
+.about .right-about {
+    float: right;
+    top: 30px;
+}
+
+.about .right-about button {
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    border-radius: 50px;
+    background-color: #7DB7EA;
+    font-weight: bold;
+}
+
+.about .right-about button:hover {
+    background-color: #213140;
+}
+
+.about .right-about .card {
+    margin-bottom: 10px;
+    padding: 10px 10px 2px 16px;
+    border-radius: 50px;
+}
+
+
+/* ==========
+
+Portfolio section 
+
+========== */
+
+.portfolioSection {
+    position: relative;
+    padding-top: 70px !important;
+    padding-bottom: 60px;
+    clear: both;
+}
+
+.portfolioInfo h1 {
+    position: relative;
+    text-align: center !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+
+/* After Style For Portfolio H1 */
+
+#portfolio h1:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    width: 80px;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: -85px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+
+/* Before Style For Portfolio H1 */
+
+#portfolio h1:before {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    width: 80px;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: 65px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+
+/* After Style For Portfolio H1 Span */
+
+#portfolio h1 span:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    background-color: rgb(51, 67, 195);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    top: 35px;
+    left: -115px;
+}
+
+.filter {
+    margin: 60px;
+    padding: 0 0 40px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    opacity: 1;
+}
+
+.filter li {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px 10px;
+    padding: 15px 20px;
+    border: 2px solid currentColor;
+    border-radius: 30px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.filter li.active {
+    background: #7DB7EA;
+    border-color: transparent;
+    color: #fff;
+}
+
+.filter li:active {
+    color: #fff !important;
+    background-color: none;
+}
+
+.filter li:hover {
+    border-color: rgba(51, 67, 195, 0.54);
+    color: rgba(51, 67, 195, 0.54) !importants;
+}
+
+
+/* ==============
+
+Footer 
+
+=============*/
+
+.footer {
+    background-color: #213140;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+.footer h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 30px 0 10px 0;
+}
+
+
+/* After Style For Footer H1 */
+
+.footer h1:after {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    width: 90px;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    left: -90px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+
+/* Before Style For Footer H1 */
+
+.footer h1:before {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 90px;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    left: 70px;
+    /* Rotate div */
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+
+/* After Style For Footer H1 Span */
+
+.footer h1 span:before {
+    content: "";
+    margin-top: 2px;
+    border: 2px solid rgba(51, 67, 195, 0.54);
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    top: 45px;
+    left: -125px;
+}
+
+.footer-body {
+    position: relative;
+    width: 100%;
+}
+
+
+/* ====
+Animate Number CSS
+==== */
+
+#shiva {
+    width: 100%;
+    height: 80px;
+    border-radius: 50px;
+    float: left;
+    margin: 5px;
+}
+
+.increase {
+    line-height: 80px;
+    color: white;
+    -webkit-transition: 3s ease-out;
+    transition: 3s ease-out;
+    border-radius: 100%;
+    margin: 10px 5px auto 20px;
+    font-size: 35px;
+}
+
+.customers {
+    color: #7DB7EA;
+}
+
+footer .span_1:first-child,
+footer .span_1:last-child {
+    margin: 0;
+}
+
+footer .span_1 {
+    position: relative;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    color: white;
+    width: 20%;
+    float: left;
+}
+
+footer .span_1 h3 {
+    word-spacing: 5px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    -webkit-transition: .35s;
+    transition: .35s;
+    border: 2px solid rgba(66, 196, 244, 0.54) !important;
+    -webkit-box-shadow: 2px 2px 5px #888888;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.form-group textarea:focus {
+    -webkit-transition: .35s;
+    transition: .35s;
+    border: 4px solid rgba(51, 67, 195, 0.54) !important;
+    -webkit-box-shadow: 2px 2px 5px #888888;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* ==========
+
+    Navigation With Brand-Name
+
+    =============
+    */
+    #navigation {
+        position: fixed;
+        top: 0;
+        padding-bottom: 10px !important;
+        padding-left: 30%;
+        background-color: #213140 !important;
+        -webkit-transition: top 0.3s, -webkit-transform 0.3s;
+        transition: top 0.3s, -webkit-transform 0.3s;
+        transition: top 0.3s, transform 0.3s;
+        transition: top 0.3s, transform 0.3s, -webkit-transform 0.3s;
+        width: 100%;
+        z-index: 9999;
+        display: none;
+        -webkit-box-shadow: 0 1px 1px #888888;
+        box-shadow: 0 1px 1px #888888;
+    }
+    #navigation ul {
+        width: auto;
+        height: 100%;
+        background-color: #213140 !important;
+        margin-left: 0;
+    }
+    .navbar-toggler-left {
+        display: none !important;
+    }
+    /* =========
+
+    Hero Section
+
+    ============*/
+    #hero {
+        left: 35%;
+        top: 20%;
+    }
+    /* =========
+
+    Intro Section
+
+    ============*/
+    #intro .introHero {
+        padding: 80px 0 10em 6em;
+        color: #fff;
+    }
+    /* ==========
+
+    About Section A&Q
+
+    ============ */
+    .about .right-about button {
+        width: 100%;
+        padding: 10px !important;
+        font-size: 11pt;
+    }
+    /* =========
+
+    Portfolio Section
+
+    ============*/
+    .filter li {
+        font-size: .95em;
+        padding: 8px 10px 8px 10px;
+    }
+    .works li img {
+        font-size: 1em;
+        margin: -60px auto auto 5em !important;
+        height: 210px;
+        width: 210px;
+    }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 768px) {
+    /* =========
+
+    Background Section
+
+    ============*/
+    .bg {
+        display: block;
+        height: 800px;
+    }
+    /* =========
+
+    Hero Section
+
+    ============*/
+    #hero {
+        top: 10%;
+        width: 95%;
+        left: auto;
+        margin-left: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    #hero .heroInfo {
+        text-align: center;
+        width: 100%;
+        margin-top: 20%;
+        word-spacing: 5px;
+        z-index: 9999;
+        color: #fff;
+    }
+    #hero h1 {
+        position: relative;
+        font-size: 35pt;
+    }
+    #hero h3 {
+        font-size: 20pt;
+    }
+    #hero small {
+        font-size: 12pt;
+        font-weight: 600;
+    }
+    #hero .social-link {
+        position: relative;
+        right: 4.5em;
+        bottom: 1em;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        margin: auto;
+    }
+    #hero .social-link i {
+        display: table-cell;
+        float: right;
+    }
+    #hero .button {
+        margin-left: 6px;
+        margin-top: 10px;
+    }
+    /* =========
+
+    End of Hero Section
+
+    ============*/
+    /* =========
+
+    Navigation CSS Section
+
+    ============*/
+    #navigation {
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        background: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    #navigation ul {
+        width: auto;
+        height: 100%;
+        background-color: rgba(33, 49, 64, 0.85) !important;
+        margin-left: 0;
+    }
+    #navigation ul li {
+        margin: 100px 10px 0 10px;
+    }
+    .navbar-toggler {
+        background-color: rgba(33, 49, 64, 0.73) !important;
+        z-index: 9999;
+        float: left !important;
+        height: 100px !important;
+    }
+    .navbar-toggler-icon {
+        width: 100%;
+        height: 0 !important;
+        border-radius: 100% !important;
+        float: left;
+    }
+    .navbar .navbar-collapse {
+        margin-left: 0;
+    }
+    #navigation .navbar-collapse ul {
+        float: left !important;
+        width: auto !important;
+    }
+    #navigation .navbar-collapse ul li {
+        float: left !important;
+        margin-top: 10px;
+    }
+    .navbar .navbar-collapse ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        height: 100%;
+        /* Full height */
+        position: fixed;
+        /* Make it stick, even on scroll */
+        overflow: auto;
+        /* Enable scrolling if the sidenav has too much content */
+    }
+    .navbar-inverse .navbar-nav .nav-link {
+        display: block;
+        float: left !important;
+    }
+    /* =========
+
+    End of Navigation Section
+
+    ============*/
+    /* =========
+
+    Intro Section 
+
+    =========== */
+    #intro {
+        float: left;
+        margin-left: 0 !important;
+        width: auto;
+    }
+    #intro .introImage img {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        margin-bottom: 10px;
+        ;
+    }
+    #intro .introHero {
+        padding: 50px 0 5em 0;
+    }
+    #intro h2 {
+        font-weight: 300;
+        margin-bottom: 20px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+    }
+    #intro p {
+        font-size: 15pt;
+        font-weight: bold;
+    }
+    /* =========
+
+    End of Intro Section 
+
+    =========== */
+    /* ==========
+
+    About Section A&Q
+
+    ============ */
+    .about {
+        position: relative;
+        clear: both;
+        width: 100%;
+        padding-top: 40px !important;
+    }
+    .about h1 {
+        margin-top: 1em !important;
+        left: 0;
+        font-size: 25pt;
+        width: auto;
+    }
+    /* After Style For About H1 */
+    .about h1:after {
+        content: "";
+        margin-top: 0px;
+        width: 50px;
+        top: 20px;
+        left: -60px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+    /* Before Style For About H1 */
+    .about h1:before {
+        content: "";
+        margin-top: 0;
+        width: 50px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        left: 50px;
+        top: 20px;
+    }
+    /* After Style For About H1 Span */
+    .about h1 span:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        top: 33px;
+        left: -85px;
+    }
+    .about .left-about {
+        margin-top: 35px;
+    }
+    .about .right-about {
+        float: none;
+        top: 30px;
+    }
+    .about .right-about button {
+        font-size: 9pt;
+        padding-left: 5px;
+    }
+    .about .right-about .card {
+        padding: 0px 10px 2px 16px;
+        font-size: 10pt;
+        font-weight: 600;
+    }
+    /* ==========
+
+    End of About Section A&Q
+
+    ============ */
+    /* ==========
+
+    Portfolio section 
+
+    ========== */
+    .portfolioSection {
+        position: relative;
+        padding-top: 70px !important;
+        padding-bottom: 0px;
+        clear: both;
+    }
+    .portfolioInfo h1 {
+        font-size: 25pt;
+    }
+    /* After Style For Portfolio H1 */
+    #portfolio h1:after {
+        content: "";
+        margin-top: 0px;
+        width: 60px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        top: 30px;
+        left: -80px;
+    }
+    /* Before Style For Portfolio H1 */
+    #portfolio h1:before {
+        content: "";
+        margin-top: 0;
+        width: 60px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        left: 60px;
+        top: 30px;
+    }
+    /* After Style For Portfolio H1 Span */
+    #portfolio h1 span:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        top: 41px;
+        left: -95px;
+    }
+    .filter {
+        width: 100%;
+        margin: 70px 0 0 0;
+        font-size: 0.8em;
+    }
+    .filter li {
+        width: 100%;
+    }
+    .filter li.active {
+        background: #7DB7EA;
+        border-color: transparent;
+        color: #fff;
+    }
+    .filter li:active {
+        color: #fff !important;
+        background-color: none;
+    }
+    .filter li:hover {
+        border-color: rgba(51, 67, 195, 0.54);
+        color: rgba(51, 67, 195, 0.54) !importants;
+    }
+    .works li img {
+        margin: auto auto !important;
+        height: 200px;
+        width: 200px;
+    }
+    /* ==========
+
+    End of Portfolio section 
+
+    ========== */
+    /* ==========
+
+    Footer section 
+
+    ========== */
+    .footer {
+        padding-top: 20px;
+        width: 100%;
+    }
+    .footer h1 {
+        font-size: 25pt;
+        padding: 30px 0 10px 0;
+    }
+    /* After Style For Footer H1 */
+    .footer h1:after {
+        content: "";
+        margin-top: 0px;
+        width: 60px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        top: 30px;
+        left: -75px;
+    }
+    /* Before Style For Footer H1 */
+    .footer h1:before {
+        content: "";
+        margin-top: 0;
+        width: 60px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        left: 60px;
+        top: 30px;
+    }
+    /* After Style For Footer H1 Span */
+    .footer h1 span:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        top: 40px;
+        left: -105px;
+        ;
+    }
+    .footer-body {
+        width: 100%;
+    }
+    footer .span_1 header h3 {
+        font-size: 15pt;
+        font-weight: 600;
+    }
+    /* ====
+    Animate Number CSS
+    ==== */
+    #shiva {
+        width: 100%;
+        font-weight: 500
+    }
+    .increase {
+        line-height: 50px;
+        margin: 10px 5px auto 20px;
+        font-size: 25pt;
+    }
+    footer .span_1 {
+        margin-bottom: 20px !important;
+        width: 100%;
+    }
+    footer .span_1 h3 {
+        font-size: 18pt;
+        font-weight: 600;
+        word-spacing: 3px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    /* ==========
+
+    End of Footer section 
+
+    ========== */
+}
+
+@media only screen and (min-width: 10px) and (max-width: 380px) {
+    .about .right-about button {
+        font-size: 8.7pt;
+    }
+    /* After Style For About H1 */
+    .about h1:after {
+        display: none !important;
+    }
+    /* Before Style For About H1 */
+    .about h1:before {
+        display: none !important;
+    }
+    /* After Style For Portfolio H1 */
+    #portfolio h1:after {
+        display: none !important;
+    }
+    /* Before Style For Portfolio H1 */
+    #portfolio h1:before {
+        display: none !important;
+    }
+    /* After Style For Footer H1 */
+    .footer h1:after {
+        display: none;
+    }
+    /* Before Style For Footer H1 */
+    .footer h1:before {
+        display: none;
+    }
+}
+
+
+/*
+
+============================================================
+
+
+Investing Index Page CSS
+
+
+============================================================
+
+*/
+
+#navigations {
+    position: fixed;
+    top: 0;
+    padding-bottom: 0px !important;
+    background-color: #213140 !important;
+    -webkit-transition: top 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, transform 0.3s;
+    transition: top 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    width: 100%;
+    z-index: 9999;
+    -webkit-box-shadow: 0 1px 1px #888888;
+    box-shadow: 0 1px 1px #888888;
+}
+
+#navigations ul {
+    width: auto;
+    text-align: center !important;
+    list-style-type: none;
+    font-size: 25px;
+    padding: 0;
+    float: none;
+    margin: 0 auto;
+}
+
+#navigations ul li i {
+    color: #fff;
+    float: none;
+}
+
+#banner {
+    background: rgba(239, 185, 63, 0.82);
+    color: #fff;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 80px;
+}
+
+#bigTriangleBanner {
+    fill: rgba(239, 185, 63, 0.82);
+}
+
+#banner p {
+    font-size: 15pt;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 20px auto 0 auto;
+    background-color: #7DB7EA;
+    border-radius: 20px;
+    padding: 2px 10px 5px 10px;
+}
+
+#banner .sharethis-inline-share-buttons .st-btn {
+    position: relative;
+    top: 13px !important;
+}
+
+#st-1 .st-btn:hover {
+    top: 17px !important;
+}
+
+#st-1 .st-btn[data-network='sharethis'] {
+    display: none !important;
+}
+
+#banner h1 {
+    font-size: 40pt;
+}
+
+.blog {
+    padding: 50px 20px;
+    margin: 50px 0 !important;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 2px 2px 2px #888888;
+    box-shadow: 0 2px 2px 2px #888888;
+    width: auto;
+    border-radius: 10px;
+    float: left;
+}
+
+.blog u {
+    color: #7DB7EA;
+    font-weight: 600;
+}
+
+.blog .fa-check:before {
+    color: #7DB7EA;
+}
+
+#guide {
+    background-color: rgba(239, 185, 63, 0.82);
+    color: #fff;
+    padding: 30px 20px;
+    margin: 50px 0 !important;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 2px 2px 2px #888888;
+    box-shadow: 0 2px 2px 2px #888888;
+    width: auto;
+    border-radius: 10px;
+    float: right;
+}
+
+#guide h2 {
+    font-size: 20pt;
+}
+
+#guide h3 {
+    font-size: 15pt;
+}
+
+#guide .guideImg {
+    border: 3px solid grey;
+    border-radius: 100%;
+    margin: 20px 54px 20px 54px;
+    padding: 20px;
+    text-align: center;
+}
+
+#guide button {
+    padding: 10px 20px;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    width: 81%;
+    font-size: 20pt;
+}
+
+.modal {
+    top: 50px !important;
+}
+
+.form-inline .form-group {
+    margin-bottom: 1em !important;
+}
+
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (min-width: 100px) and (max-width: 1350px) {
+    #guide {
+        float: left;
+        width: 100% !important;
+    }
+    #guide .guideImg {
+        margin: 10px 24px !important;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-inverse .navbar-nav .goHome {
+        float: none !important;
+    }
+    #navigations ul {
+        margin: 0 auto;
+    }
+    .investingBlog .row {
+        display: inline-block !important;
+    }
+    /* ==========
+
+    Investing Blog Column 
+
+    ========== */
+    .investingBlog .col-sm-8 {
+        max-width: 100% !important;
+    }
+    .investingBlog .col-sm-4 {
+        max-width: 100% !important;
+    }
+    /* ==========
+
+    End of Investing Blog Column
+
+    ========== */
+    #banner {
+        height: 350px;
+        padding-top: 80px;
+        margin-top: 80px;
+    }
+    #banner .sharethis-inline-share-buttons .st-btn {
+        position: relative;
+        top: 30px;
+    }
+    #st-1.st-has-labels .st-btn {
+        min-width: 50px !important;
+    }
+    #st-1 .st-btn:hover {
+        top: 25px !important;
+    }
+    #banner h1 {
+        font-size: 35pt;
+    }
+    .blog {
+        min-width: 20% !important
+    }
+    #guide {
+        float: left;
+        width: 100% !important;
+        height: 400px;
+        margin: 10px auto 50px auto !important;
+    }
+    #guide h3 {
+        float: left;
+        width: 60%;
+    }
+    #guide .form-group {
+        margin-top: 0px !important;
+        width: 60%;
+        position: relative;
+        bottom: 140px;
+    }
+    #guide button {
+        margin: 0 auto !important;
+        width: auto!important;
+        margin: 0 auto !important;
+        width: auto!important;
+        position: relative;
+        bottom: 150px;
+    }
+    #guide .guideImg {
+        position: relative;
+        bottom: 40px;
+        left: 10px;
+        margin: 10px 24px !important;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 900px) {
+    #navigations .navbar-collapse ul {
+        margin: 0 auto !important;
+        width: 26% !important;
+        position: unset !important;
+    }
+    #banner .sharethis-inline-share-buttons .st-btn {
+        position: relative;
+        top: 40px !important;
+    }
+    #st-1.st-has-labels .st-btn {
+        min-width: 50px !important;
+    }
+    #st-1 .st-btn:hover {
+        top: 25px !important;
+    }
+    .investingBlog .row {
+        display: inline-block !important;
+    }
+    /* ==========
+
+    Investing Blog Column 
+
+    ========== */
+    .investingBlog .col-sm-8 {
+        max-width: 100% !important;
+    }
+    .investingBlog .col-sm-4 {
+        max-width: 100% !important;
+    }
+    /* ==========
+
+    End of Investing Blog Column
+
+    ========== */
+    #banner h1 {
+        font-size: 28pt;
+    }
+    .blog {
+        min-width: 20% !important
+    }
+    #guide {
+        float: left;
+        width: 100% !important;
+        height: 400px;
+        margin: 10px auto 50px auto !important;
+    }
+    #guide h3 {
+        float: left;
+        width: 57%;
+    }
+    #guide .guideImg {
+        position: relative;
+        bottom: 40px;
+        left: 10px;
+        margin: 10px 5px !important;
+        float: left;
+        height: 170px;
+    }
+    #guide .form-group {
+        margin-top: 0px !important;
+        width: 60%;
+        position: relative;
+        bottom: 75px;
+    }
+    #guide button {
+        margin: 0 auto !important;
+        width: auto!important;
+        margin: 0 auto !important;
+        width: auto!important;
+        position: relative;
+        bottom: 75px
+    }
+}
+
+@media only screen and (min-width: 10px) and (max-width: 600px) {
+    #navigations .navbar-collapse ul {
+        height: auto !important;
+        position: unset;
+    }
+    #banner h1 {
+        font-size: 19pt;
+    }
+    #banner .sharethis-inline-share-buttons {
+        margin: 0px auto !important;
+        float: left;
+        text-align: center;
+        padding: 0px !important;
+        width: 100%;
+    }
+    #banner .sharethis-inline-share-buttons .st-btn {
+        margin-bottom: 10px;
+        min-width: 50px !important;
+    }
+    .blog {
+        min-width: 20% !important
+    }
+    #guide {
+        float: left;
+        width: 100% !important;
+        height: auto;
+        margin: 0 auto 50px auto !important;
+    }
+    #guide h3 {
+        float: left;
+        width: auto;
+    }
+    #guide .guideImg {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 0 auto !important;
+        float: left;
+        height: 170px;
+    }
+    #guide .form-group {
+        margin-top: 0px !important;
+        width: auto;
+        position: relative;
+        top: 10px;
+    }
+    #guide button {
+        margin: 0 auto !important;
+        width: auto!important;
+        margin: 0 auto !important;
+        width: auto!important;
+        position: relative;
+        bottom: auto;
+        font-size: 15.5pt;
+    }
+}
